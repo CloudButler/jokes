@@ -1,0 +1,26 @@
+---
+cog_bundle_version: 4
+
+name: jokes
+version: 1.0.1
+docker:
+  image: cloudbutler/jokes
+  tag: 1.0.1
+description: Cog bundle. Fetch some fresh jokes!
+author: Charles Christensen <github.com/charlesrc19>
+commands:
+  dad-joke:
+    executable: /home/bundle/bin/Get-DadJoke.ps1
+    description: Fetch a dad joke!
+    rules:
+      - allow
+  norris-joke:
+    executable: /home/bundle/bin/Get-NorrisJoke.ps1
+    description: Fetch a Chuck Norris joke!
+    rules:
+      - allow
+  test-joke:
+    executable: cat /home/bundle/bin/test.txt
+    description: Print out a generic test joke.
+    rules:
+      - allow
